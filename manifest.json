@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "SobJanta AI",
+    "version": "1.0",
+    "description": "An AI assistant that can explain the current page.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "SobJanta AI"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content/content.js"
+            ]
+        }
+    ]
+}
